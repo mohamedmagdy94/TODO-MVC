@@ -5,5 +5,5 @@ The puprpose of this series is to demonstrate some concepts like :<br />
 2)Unit Testing.<br />
 3)Reactive programming.<br />
 4)Clean Architecture.<br />
-In this series i am focusing on demonstrate the MVC design pattern in ios.<br />
+In this part i am focusing on demonstrate the MVC design pattern in ios.<br />
 
