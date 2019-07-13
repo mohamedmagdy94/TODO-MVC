@@ -5,8 +5,9 @@ The puprpose of this series is to demonstrate some concepts like :<br />
 2)Unit Testing.<br />
 3)Reactive programming.<br />
 4)Clean Architecture.<br />
-through implementing a to-do app multiple times.
-Product Backlog: 
-https://trello.com/b/3mLxrGUv/todo
+5)Clean Code. <br/>
+through implementing a to-do app multiple times.<br/>
+Product Backlog: <br/>
+https://trello.com/b/3mLxrGUv/todo<br/>
 In this part i am focusing on demonstrate the MVC design pattern in ios.<br />
 
