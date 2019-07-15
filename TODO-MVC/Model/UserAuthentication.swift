@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct UserAuthentication:Codable{
+    
+    private var _userAuthentication: String
+    
+    var userAuthentication: String{
+        get{ return _userAuthentication }
+        set{ _userAuthentication = newValue }
+    }
+    
+}
