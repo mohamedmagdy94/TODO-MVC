@@ -12,6 +12,7 @@
 		6D17EE6A22DC6983003D24C3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE6922DC6983003D24C3 /* RegisterViewController.swift */; };
 		6D17EE6C22DC7C0D003D24C3 /* RegisterValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE6B22DC7C0D003D24C3 /* RegisterValidator.swift */; };
 		6D17EE6E22DC8CF4003D24C3 /* ShowReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE6D22DC8CF4003D24C3 /* ShowReminderViewController.swift */; };
+		6D17EE7022DC9A1E003D24C3 /* AuthenticationValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE6F22DC9A1E003D24C3 /* AuthenticationValidationTests.swift */; };
 		6D2AB16922DA77D800F43409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2AB16822DA77D800F43409 /* AppDelegate.swift */; };
 		6D2AB16B22DA77D800F43409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2AB16A22DA77D800F43409 /* LoginViewController.swift */; };
 		6D2AB16E22DA77D800F43409 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2AB16C22DA77D800F43409 /* Authentication.storyboard */; };
@@ -73,6 +74,7 @@
 		6D17EE6922DC6983003D24C3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6D17EE6B22DC7C0D003D24C3 /* RegisterValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidator.swift; sourceTree = "<group>"; };
 		6D17EE6D22DC8CF4003D24C3 /* ShowReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowReminderViewController.swift; sourceTree = "<group>"; };
+		6D17EE6F22DC9A1E003D24C3 /* AuthenticationValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationValidationTests.swift; sourceTree = "<group>"; };
 		6D2AB16522DA77D800F43409 /* TODO-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TODO-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2AB16822DA77D800F43409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D2AB16A22DA77D800F43409 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				6D2AB18022DA77DC00F43409 /* TODO_MVCTests.swift */,
 				6D2AB18222DA77DC00F43409 /* Info.plist */,
+				6D17EE6F22DC9A1E003D24C3 /* AuthenticationValidationTests.swift */,
 			);
 			path = "TODO-MVCTests";
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D17EE7022DC9A1E003D24C3 /* AuthenticationValidationTests.swift in Sources */,
 				6D2AB18122DA77DC00F43409 /* TODO_MVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
