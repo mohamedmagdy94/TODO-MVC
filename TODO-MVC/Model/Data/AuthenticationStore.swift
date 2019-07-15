@@ -14,16 +14,22 @@ struct AuthenticationStore: AuthenticationStoreContract{
     private let codableTransformer = CodableTransformer()
     
     func loginWithPhoneNameAndPassword(userCredential: UserCredential, onSuccess: @escaping (UserAuthentication?) -> (), onFailed: @escaping (AuthenticaionError) -> ()) {
-        guard let encodedUserAuthentication = userDefaults.data(forKey: userCredential.phoneNumber) else{
+        guard let encodedUsers = userDefaults.data(forKey: AuthenticationUserDefaultKeys.Users.rawValue) else{
             onSuccess(nil)
             return
         }
-        guard let decodedUserAuthentication = codableTransformer.decodeObject(data: encodedUserAuthentication, targetModel: UserAuthentication.self) else{
-            onSuccess(nil)
-            return
+        let decodedUsers = codableTransformer.decodeObject(data: encodedUsers, targetModel: [User].self)
+        let user = decodedUsers?.first{
+            ($0.phoneNumber == userCredential.phoneNumber && $0.password == userCredential.password)
         }
-        onSuccess(decodedUserAuthentication)
+        if let user = user{
+            let userAuthentication = UserAuthentication.init(userIdentifier: user.phoneNumber)
+            onSuccess(userAuthentication)
+        }else{
+            onSuccess(nil)
+        }
     }
+    
     
     func saveUserAuthenticaion(userAuthentication: UserAuthentication,onSuccess:@escaping()->(),onFailed:@escaping(AuthenticaionError)->()){
         guard let encodedUserAuthentication = codableTransformer.encodeObject(object: userAuthentication) else{
@@ -34,5 +40,7 @@ struct AuthenticationStore: AuthenticationStoreContract{
         onSuccess()
         
     }
+    
+    
     
 }

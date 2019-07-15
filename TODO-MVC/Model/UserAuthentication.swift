@@ -10,11 +10,15 @@ import Foundation
 
 struct UserAuthentication:Codable{
     
-    private var _userAuthentication: String
+    private var _userIdentifier: String
     
-    var userAuthentication: String{
-        get{ return _userAuthentication }
-        set{ _userAuthentication = newValue }
+    init(userIdentifier: String) {
+        _userIdentifier = userIdentifier
+    }
+    
+    var userIdentifier: String{
+        get{ return _userIdentifier }
+        set{ _userIdentifier = newValue }
     }
     
 }
