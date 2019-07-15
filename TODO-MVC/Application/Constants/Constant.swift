@@ -8,7 +8,6 @@
 
 import Foundation
 
-enum Constant: String{
-    case socketBaseURL = "https://control.going-trips.com:8080/"
-    case mediaBaseURL = "https://images.goooings.com/images/"
-}
+//enum Constant: String{
+//    
+//}

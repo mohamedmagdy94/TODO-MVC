@@ -11,4 +11,5 @@ import Foundation
 enum ViewControllerID: String{
     case LoginViewController
     case ShowReminderViewController
+    case RegisterViewController
 }

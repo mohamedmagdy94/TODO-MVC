@@ -10,21 +10,21 @@ import Foundation
 
 class AuthenticationValidator{
     
-    private func validateObjectWithRegularExpression(object: String,regularExpression: String)->Bool{
+    public func validateObjectWithRegularExpression(object: String,regularExpression: String)->Bool{
         let regexPrediction = NSPredicate(format:"SELF MATCHES %@", regularExpression)
         let validationResult = regexPrediction.evaluate(with: object)
         return validationResult
     }
     
     func validatePhoneNumber(phoneNumber: String)->Bool{
-        let phoneRegeularExpression = "^.d{9,}$"
+        let phoneRegeularExpression = "^.{9,}$"
         let regexValidationResult = validateObjectWithRegularExpression(object: phoneNumber, regularExpression: phoneRegeularExpression)
         return regexValidationResult
     }
     
     func validatePassword(password: String)->Bool{
         let passwordRegeularExpression = "^.{8,}$"
-        let regexValidationResult = validateObjectWithRegularExpression(object: passwordRegeularExpression, regularExpression: password)
+        let regexValidationResult = validateObjectWithRegularExpression(object: password, regularExpression: passwordRegeularExpression)
         return regexValidationResult
     }
     

@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
             self.showErrorIndicator(message: "Wrong Phone Number")
             return false
         }
-        let passwordValidationResult = authenticationValidator.validatePhoneNumber(phoneNumber: userPhoneTextField.text ?? "")
+        let passwordValidationResult = authenticationValidator.validatePassword(password: passwordTextField.text ?? "")
         if !passwordValidationResult{
             self.showErrorIndicator(message: "Wrong Password")
             return false
@@ -90,8 +90,9 @@ class LoginViewController: UIViewController {
     }
     
     private func handleSuccessfullUserAuthentication(){
-        let showRemindersViewController = UINavigationController.getViewController(storyboardName: StoryboardName.Authentication.rawValue, viewControllerID: ViewControllerID.ShowReminderViewController.rawValue)
+        let showRemindersViewController = UINavigationController.getViewController(storyboardName: StoryboardName.Reminder.rawValue, viewControllerID: ViewControllerID.ShowReminderViewController.rawValue)
         self.navigationController?.pushViewController(showRemindersViewController, animated: true)
     }
+    
 }
 
