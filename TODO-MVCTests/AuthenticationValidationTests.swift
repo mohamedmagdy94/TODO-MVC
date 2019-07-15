@@ -88,7 +88,6 @@ class AuthenticationValidationTests: XCTestCase {
         }else{
             XCTAssert(false)
         }
-        
     }
     
     func testPerformanceExample() {

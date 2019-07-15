@@ -12,4 +12,7 @@ enum ViewControllerID: String{
     case LoginViewController
     case ShowReminderViewController
     case RegisterViewController
+    case MenuViewController
+    case AuthenticaionNavigationController
+    case RemindersNavigationController
 }

@@ -13,6 +13,9 @@
 		6D17EE6C22DC7C0D003D24C3 /* RegisterValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE6B22DC7C0D003D24C3 /* RegisterValidator.swift */; };
 		6D17EE6E22DC8CF4003D24C3 /* ShowReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE6D22DC8CF4003D24C3 /* ShowReminderViewController.swift */; };
 		6D17EE7022DC9A1E003D24C3 /* AuthenticationValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE6F22DC9A1E003D24C3 /* AuthenticationValidationTests.swift */; };
+		6D17EE7222DCA33A003D24C3 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE7122DCA33A003D24C3 /* MenuViewController.swift */; };
+		6D17EE7422DCA35B003D24C3 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D17EE7322DCA35B003D24C3 /* Menu.storyboard */; };
+		6D17EE7622DCAC83003D24C3 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D17EE7522DCAC83003D24C3 /* Main.swift */; };
 		6D2AB16922DA77D800F43409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2AB16822DA77D800F43409 /* AppDelegate.swift */; };
 		6D2AB16B22DA77D800F43409 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2AB16A22DA77D800F43409 /* LoginViewController.swift */; };
 		6D2AB16E22DA77D800F43409 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2AB16C22DA77D800F43409 /* Authentication.storyboard */; };
@@ -75,6 +78,9 @@
 		6D17EE6B22DC7C0D003D24C3 /* RegisterValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterValidator.swift; sourceTree = "<group>"; };
 		6D17EE6D22DC8CF4003D24C3 /* ShowReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowReminderViewController.swift; sourceTree = "<group>"; };
 		6D17EE6F22DC9A1E003D24C3 /* AuthenticationValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationValidationTests.swift; sourceTree = "<group>"; };
+		6D17EE7122DCA33A003D24C3 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6D17EE7322DCA35B003D24C3 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		6D17EE7522DCAC83003D24C3 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		6D2AB16522DA77D800F43409 /* TODO-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TODO-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2AB16822DA77D800F43409 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D2AB16A22DA77D800F43409 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 				6D2AB16C22DA77D800F43409 /* Authentication.storyboard */,
 				6D2AB17422DA77DB00F43409 /* LaunchScreen.storyboard */,
 				6DB5626B22DB960B004C7335 /* Reminder.storyboard */,
+				6D17EE7322DCA35B003D24C3 /* Menu.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 				6D2AB16A22DA77D800F43409 /* LoginViewController.swift */,
 				6D17EE6922DC6983003D24C3 /* RegisterViewController.swift */,
 				6D17EE6D22DC8CF4003D24C3 /* ShowReminderViewController.swift */,
+				6D17EE7122DCA33A003D24C3 /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 				6D2AB16822DA77D800F43409 /* AppDelegate.swift */,
 				6DB5625222DB473A004C7335 /* Device.swift */,
 				6DB5626922DB4CFE004C7335 /* CodableTransformer.swift */,
+				6D17EE7522DCAC83003D24C3 /* Main.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -448,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D17EE7422DCA35B003D24C3 /* Menu.storyboard in Resources */,
 				6DB5626C22DB960B004C7335 /* Reminder.storyboard in Resources */,
 				6D2AB17622DA77DB00F43409 /* LaunchScreen.storyboard in Resources */,
 				6D2AB17322DA77DB00F43409 /* Assets.xcassets in Resources */,
@@ -563,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D17EE6A22DC6983003D24C3 /* RegisterViewController.swift in Sources */,
+				6D17EE7222DCA33A003D24C3 /* MenuViewController.swift in Sources */,
 				6D17EE6C22DC7C0D003D24C3 /* RegisterValidator.swift in Sources */,
 				6D17EE6822DC6724003D24C3 /* User.swift in Sources */,
 				6DB5625E22DB473B004C7335 /* ApplicationLanguages.swift in Sources */,
@@ -578,6 +589,7 @@
 				6DB5625622DB473B004C7335 /* UIView.swift in Sources */,
 				6D2AB16B22DA77D800F43409 /* LoginViewController.swift in Sources */,
 				6DB5623622DB3DFF004C7335 /* AuthenticationValidator.swift in Sources */,
+				6D17EE7622DCAC83003D24C3 /* Main.swift in Sources */,
 				6DB5625D22DB473B004C7335 /* Constant.swift in Sources */,
 				6DB5623222DB3DE3004C7335 /* UserCredential.swift in Sources */,
 				6DB5625A22DB473B004C7335 /* UIImageView.swift in Sources */,

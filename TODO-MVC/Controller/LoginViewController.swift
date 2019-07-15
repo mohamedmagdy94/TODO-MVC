@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     
     @IBOutlet weak var userPhoneTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -20,14 +20,14 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.authenticaionStore = AuthenticationStore()
-
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     @IBAction func onLoginButtonTapped(_ sender: Any) {
         login()
     }
- 
+    
     func validateLoginData()->Bool{
         let authenticationValidator = AuthenticationValidator()
         let phoneValidationResult = authenticationValidator.validatePhoneNumber(phoneNumber: userPhoneTextField.text ?? "")
@@ -66,7 +66,7 @@ class LoginViewController: UIViewController {
     
     private func authenticateUser(userAuthentication: UserAuthentication){
         authenticaionStore.saveUserAuthenticaion(userAuthentication: userAuthentication, onSuccess: {[unowned self] in
-           self.handleSuccessfullUserAuthentication()
+            self.handleSuccessfullUserAuthentication()
         }) {[unowned self] (error) in
             self.handleSaveUserAuthenticationFail()
         }
@@ -90,8 +90,8 @@ class LoginViewController: UIViewController {
     }
     
     private func handleSuccessfullUserAuthentication(){
-        let showRemindersViewController = UINavigationController.getViewController(storyboardName: StoryboardName.Reminder.rawValue, viewControllerID: ViewControllerID.ShowReminderViewController.rawValue)
-        self.navigationController?.pushViewController(showRemindersViewController, animated: true)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.setFirstScreen()
     }
     
 }

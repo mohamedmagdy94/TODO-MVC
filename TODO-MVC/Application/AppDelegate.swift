@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setFirstScreen()
         return true
     }
 
@@ -89,5 +91,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    func setFirstScreen(){
+        let main = Main(authenticaionStore: AuthenticationStore())
+        let initialViewController = main.getInitialViewController()
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
+    }
+    
 }
 

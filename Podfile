@@ -8,6 +8,7 @@ target 'TODO-MVC' do
   # Pods for TODO-MVC
     pod 'Localize-Swift', '~> 2.0'
     pod 'ProgressHUD'
+    pod 'SlideMenuControllerSwift'
 
   target 'TODO-MVCTests' do
     inherit! :search_paths

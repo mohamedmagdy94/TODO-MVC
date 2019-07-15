@@ -71,6 +71,18 @@ struct AuthenticationStore: AuthenticationStoreContract{
         onSuccess(userAuthentication)
     }
     
-    
+    func logout(onSuccess:@escaping()->(),onFailed:@escaping(AuthenticaionError)->()){
+        userDefaults.removeObject(forKey: AuthenticationUserDefaultKeys.UserAuthentication.rawValue)
+        onSuccess()
+    }
+
+    func isUserAuthenticated()->Bool{
+        if let _ = userDefaults.data(forKey: AuthenticationUserDefaultKeys.UserAuthentication.rawValue){
+            return true
+        }else{
+            return false
+        }
+        
+    }
     
 }

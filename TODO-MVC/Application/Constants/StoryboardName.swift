@@ -11,4 +11,5 @@ import Foundation
 enum StoryboardName: String{
     case Authentication
     case Reminder
+    case Menu
 }

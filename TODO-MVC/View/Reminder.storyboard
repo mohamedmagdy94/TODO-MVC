@@ -20,10 +20,35 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PDo-pn-WXO"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KMC-Ha-ct1">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="e61-FX-Wuo" userLabel="menuButton">
+                            <connections>
+                                <action selector="onMenuButtonTapped:" destination="dse-tH-6ap" id="AV7-7h-S6u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3B7-x6-wyo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148" y="34"/>
+            <point key="canvasLocation" x="1087.2" y="33.733133433283363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qJG-4S-mko">
+            <objects>
+                <navigationController storyboardIdentifier="RemindersNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="EdQ-Yc-VZa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cTR-N3-xoz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dse-tH-6ap" kind="relationship" relationship="rootViewController" id="lfC-Mp-cLH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSS-RM-pgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>
