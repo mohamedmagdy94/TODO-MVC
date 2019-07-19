@@ -14,4 +14,5 @@ protocol AuthenticationStoreContract {
     func registerUser(user: User,onSuccess:@escaping(UserAuthentication)->(),onFailed:@escaping(AuthenticaionError)->())
     func logout(onSuccess:@escaping()->(),onFailed:@escaping(AuthenticaionError)->())
     func isUserAuthenticated()->Bool
+    func getUserAuthenticaion(onSuccess:@escaping(UserAuthentication)->(),onFailed:@escaping(AuthenticaionError)->())
 }

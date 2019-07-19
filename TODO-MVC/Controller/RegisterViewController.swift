@@ -71,6 +71,8 @@ class RegisterViewController: UIViewController {
             showErrorIndicator(message: "Error in your connection")
         case .ReproistoyrError:
             showErrorIndicator(message: "Server Error,Please try again")
+        case .UnAuthenticated:
+            showErrorIndicator(message: "Server Error,Please try again")
         }
     }
     
@@ -92,6 +94,8 @@ class RegisterViewController: UIViewController {
         case .ConnectionError:
             showErrorIndicator(message: "Error in your connection")
         case .ReproistoyrError:
+            showErrorIndicator(message: "Server Error,Please try again")
+        case .UnAuthenticated:
             showErrorIndicator(message: "Server Error,Please try again")
         }
     }

@@ -85,4 +85,18 @@ struct AuthenticationStore: AuthenticationStoreContract{
         
     }
     
+    func getUserAuthenticaion(onSuccess: @escaping (UserAuthentication) -> (), onFailed: @escaping (AuthenticaionError) -> ()) {
+        guard let userAuthenticationEncoded = userDefaults.data(forKey: AuthenticationUserDefaultKeys.UserAuthentication.rawValue) else{
+            onFailed(AuthenticaionError.UnAuthenticated)
+            return
+        }
+        guard let userAuthenticationDecoded = codableTransformer.decodeObject(data: userAuthenticationEncoded, targetModel: UserAuthentication.self) else{
+            onFailed(AuthenticaionError.ReproistoyrError)
+            return
+        }
+        onSuccess(userAuthenticationDecoded)
+        
+    }
+    
+    
 }
